@@ -15,7 +15,8 @@ pipeline {
             steps { 
                echo 'this is build stage' 
                sh '''
-               cd java-hello-world-webapp-scripted
+               ls
+               pwd
                mvn clean install
                '''
             }
