@@ -18,6 +18,7 @@ pipeline {
                ls
                pwd
                cd java-hello-world-scripted
+               ls
                mvn clean install
                '''
             }
