@@ -5,7 +5,7 @@ pipeline {
         stage('Source Code') { 
             steps { 
                 sh '''
-                rm -rf java-hello-world-webapp-scripted
+                rm -rf java-hello-world-scripted
                git clone https://github.com/sarathkrishna2018/java-hello-world-scripted.git
                '''
             }
@@ -17,6 +17,7 @@ pipeline {
                sh '''
                ls
                pwd
+               cd java-hello-world-scripted
                mvn clean install
                '''
             }
