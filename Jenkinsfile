@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy to Tomcat') { 
             steps { 
-                deploy adapters: [tomcat7(credentialsId: 'jenkins-tomcat-manager', path: '', url: 'http://3.83.239.14:8080/')], contextPath: 'hello-world', war: '**/*.war' 
+                deploy adapters: [tomcat7(credentialsId: 'jenkins-tomcat-manager', path: '', url: 'http://3.83.239.14:8080/')], contextPath: 'hello-world-scripted1', war: '**/*.war' 
             }
         }
     }
