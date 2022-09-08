@@ -5,8 +5,8 @@ pipeline {
         stage('Source Code') { 
             steps { 
                 sh '''
-                rm -rf java-hello-world-webapp
-               git clone https://github.com/sarathkrishna2018/java-hello-world-webapp.git
+                rm -rf java-hello-world-webapp-scripted
+               git clone https://github.com/sarathkrishna2018/java-hello-world-scripted.git
                '''
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps { 
                echo 'this is build stage' 
                sh '''
-               cd java-hello-world-webapp
+               cd java-hello-world-webapp-scripted
                mvn clean install
                '''
             }
